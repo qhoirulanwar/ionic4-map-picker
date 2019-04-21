@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="text-align: center;">Map Picker</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="close()">Cancel</ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <!-- <ion-button [disabled]="saveDisabled" ion-button (click)="save()">Save</ion-button> -->
+      <ion-button ion-button (click)="save()">Save</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-searchbar (ionInput)="searchPlace($event)"></ion-searchbar>
+
+  <!-- <ion-toolbar>
+    <ion-searchbar [(ngModel)]="query" (ionInput)="searchPlace()"></ion-searchbar>
+  </ion-toolbar> -->
+
+  <ion-list>
+    <ion-item *ngFor="let place of places" (click)="selectPlace(place)">{{place.description}}</ion-item>
+  </ion-list>
+
+</ion-header>
+
+<ion-content>
+
+  <agm-map 
+    [latitude]="map.lat" 
+    [longitude]="map.lng"
+    [zoom]="17"
+    [streetViewControl]="false"
+    >
+
+    <agm-marker 
+      [latitude]="mark.lat" 
+      [longitude]="mark.lng"
+      [markerDraggable]="true"
+      (dragEnd)="markerDragEnd($event)"
+      >
+    </agm-marker>
+
+  </agm-map>
+
+</ion-content>

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    The world is your oyster.
+    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be
+      your guide.</p>
+
+      Latitude : {{ coordinate.lat }}
+      <br>
+      Longitude : {{ coordinate.lng }}
+      <br>
+      <br>
+      
+    <ion-button (click)="presentModal()" color="primary" expand="block" mode="ios">
+      <ion-icon name="map" slot="start"></ion-icon>
+      Launch Map Picker Modal
+    </ion-button>
+    
+<!-- <ion-button expand="full" mode="ios">Outline + Full</ion-button>
+<ion-button expand="block" mode="ios">Outline + Block</ion-button>
+<ion-button shape="round" mode="ios">Outline + Round</ion-button> -->
+  </div>
+
+</ion-content>
