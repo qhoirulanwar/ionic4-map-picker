@@ -2,12 +2,12 @@
 
 Change apiKey gmaps: src\app\component\map-picker\map-picker.component.ts
 
-maps library: @agm/core https://www.npmjs.com/package/@agm/core
+maps library use: @agm/core https://www.npmjs.com/package/@agm/core
 
 ## Enable library Google service API
-Maps JavaScript API
-Places API
-Geocoding API
+- Maps JavaScript API
+- Places API
+- Geocoding API
 
 ## Getting Started
 * Clone this repository: git clone https://github.com/qhoirulanwar/ionic4-map-picker.git.
